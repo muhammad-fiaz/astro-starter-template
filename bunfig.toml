@@ -1,0 +1,13 @@
+[lint]
+ignorePatterns = ["dist/", "node_modules/", "public/pagefind/"]
+
+[lint.rules]
+"no-console" = "warn"
+"prefer-const" = "warn"
+
+[fmt]
+printWidth = 80
+semi = false
+endOfLine = "auto"
+trailingComma = "all"
+singleQuote = false

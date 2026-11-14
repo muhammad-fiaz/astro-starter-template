@@ -108,7 +108,7 @@ export async function loadHighlighter(language: string) {
             >
               {token.content}
             </span>
-          ))
+          )),
         ),
         state: shiki.getLastGrammarState(tokens),
       }

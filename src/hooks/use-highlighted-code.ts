@@ -47,7 +47,7 @@ export function useHighlightedCode(value: string, language: string) {
   if (highlighter && end > next.text.length) {
     const result = highlighter.highlight(
       code.slice(next.text.length, end - 1),
-      next.state
+      next.state,
     )
 
     next = {
