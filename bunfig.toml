@@ -1,0 +1,21 @@
+# Bun configuration: https://bun.com/docs/runtime/bunfig
+
+# Requires a Bun build that ships `bun lint` (1.4.x does not include it yet;
+# install a canary with `bun upgrade --canary`).
+[lint]
+typeAware = true
+typeCheck = false
+ignorePatterns = ["dist/", ".astro/", "public/"]
+
+[lint.rules]
+"@typescript-eslint/no-explicit-any" = "warn"
+"no-console" = "off"
+
+[fmt]
+printWidth = 80
+tabWidth = 2
+useTabs = false
+semi = true
+singleQuote = false
+trailingComma = "all"
+ignorePatterns = ["dist/", ".astro/", "public/"]

@@ -7,11 +7,33 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "bun run typecheck && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "typecheck": "astro sync && bun check",
+    "lint": "bun lint --no-script",
+    "lint:fix": "bun lint --no-script --fix",
+    "format": "bun fmt --no-script",
+    "format:check": "bun fmt --no-script --check",
+    "verify": "bun run format:check && bun run lint && bun run typecheck",
+    "prepare": "husky"
   },
   "dependencies": {
-    "astro": "^7.4.13"
+    "@astrojs/markdoc": "^2.1.5",
+    "@astrojs/partytown": "^2.1.9",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.6",
+    "@lucide/astro": "^1.79.0",
+    "astro": "^7.4.13",
+    "nanostores": "^1.5.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.5",
+    "husky": "^9.1.7",
+    "pagefind": "^1.6.0",
+    "tailwindcss": "^4.3.5",
+    "typescript": "7.0.2"
   }
 }
