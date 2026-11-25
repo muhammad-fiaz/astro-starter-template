@@ -3,6 +3,13 @@ dist/
 # generated types
 .astro/
 
+# husky
+.husky/_
+
+# pagefind
+pagefind/
+public/pagefind/
+
 # dependencies
 node_modules/
 
